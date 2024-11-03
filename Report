@@ -1,19 +1,24 @@
 
-As I began this assignment, I reviewed all files and identified multiple typos and configuration issues. I proceeded to correct these errors step-by-step. Here's a summarized note of the corrections made:
+As I began this assignment, I reviewed all files and identified multiple typos and configuration issues. I proceeded to correct these errors step-by-step.
+Here's a summarized note of the corrections made:
 1.	Docker Compose Configuration:
-o	Corrected typos in ports and volumes keys and specified build contexts to resolve container setup issues.
-o	Changed network driver from bridg to bridge and removed invalid options.
+	Corrected typos in ports and volumes keys and specified build contexts to resolve container setup issues.
+	Changed network driver from bridg to bridge and removed invalid options.
 2.	Nginx Dockerfile:
-o	Corrected image tag and EXPOSE syntax.
-o	Fixed file paths for COPY statements and command syntax in CMD.
+	Corrected image tag and EXPOSE syntax.
+	Fixed file paths for COPY statements and command syntax in CMD.
 3.	Nginx Configuration:
-o	Fixed typos in worker_processes, worker_connections, and include paths.
-o	Corrected default_type to use application/octet-stream.
+	Fixed typos in worker_processes, worker_connections, and include paths.
+	Corrected default_type to use application/octet-stream.
 4.	Python App Dockerfile:
-o	Fixed typos in WORKDIR, COPY paths, and command syntax.
-o	Corrected package name and standardized EXPOSE port.
+	Fixed typos in WORKDIR, COPY paths, and command syntax.
+	Corrected package name and standardized EXPOSE port.
 5.	Python App.py file:
-o	Revised the get_mac_address() function to retrieve the correct MAC address, which initially returned “00:00:00:00:00:00”.
-After correcting all these errors, I tried to generate an image and then ran the docker container on my local computer. Everything was correct but the Mac address was showing “00:00:00:00:00:00” so I corrected the function to retrieve the correct Mac address as stated above. Now everything was running fine.
-So, moving on to the next step deploy it on the cloud. I choose AWS free tier and in AWS I choose EC2 to deploy my assignment. First I launched an instance after making minor changes and generating a key-pair.pem file. Next on my local commuter command prompt, I connected it with ec2 with the pem file. Now I uploaded my assignment folder on the cloud and started the build. After that both the container started and my link was active. Now I was able to see the front end from any device with my IP and DNS. Next, I ran the log command to see the logs and verify them. I took a screenshot of both and added the same to the repository. 
-You can access the assignment via this link: http://51.20.12.176/
+  Revised the get_mac_address() function to retrieve the correct MAC address, which initially returned “00:00:00:00:00:00”.
+After correcting all these errors, I tried to generate an image and then ran the docker container on my local computer. Everything was correct but the Mac address was
+showing “00:00:00:00:00:00” so I corrected the function to retrieve the correct Mac address as stated above. Now everything was running fine.
+So, moving on to the next step deploy it on the cloud. I choose AWS free tier and in AWS I choose EC2 to deploy my assignment. First I launched an instance after
+making minor changes and generating a key-pair.pem file. Next on my local commuter command prompt, I connected it with ec2 with the pem file. Now I uploaded my 
+assignment folder on the cloud and started the build. After that both the container started and my link was active. Now I was able to see the front end from any 
+device with my IP and DNS. Next, I ran the log command to see the logs and verify them. I took a screenshot of both and added the same to the repository. 
+You can access the assignment via this link: http://51.20.12.176/ 
